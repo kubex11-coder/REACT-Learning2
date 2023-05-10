@@ -15,11 +15,12 @@ const App = () => {
         event.preventDefault()
 
         if (oneUser.fullName && oneUser.email && oneUser.age) {
-            const newUser = {
-                fullName: oneUser.fullName,
-                email: oneUser.email,
-                age: oneUser.age,
-            }
+            // const newUser = {
+            //     fullName: oneUser.fullName,
+            //     email: oneUser.email,
+            //     age: oneUser.age,
+            // }
+            const newUser = { ...oneUser, id: new Date().getTime() }
             setUsers((users) => {
                 return [...users, newUser]
             })
@@ -60,11 +61,11 @@ const App = () => {
                 <input type="submit" />
             </form>
 
-            {users.map((oneUser, index) => {
-                const { fullName, email, age } = oneUser
+            {users.map((oneUser) => {
+                const { id, fullName, email, age } = oneUser
 
                 return (
-                    <div key={index} className="item">
+                    <div key={id} className="item">
                         <h2>{fullName}</h2>
                         <p>{email}</p>
                         <p>{age}</p>
