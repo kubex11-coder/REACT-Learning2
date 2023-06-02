@@ -7,13 +7,20 @@ const App = () => {
 
     const submitForm = (e) => {
         e.preventDefault()
-        const amount = parseInt(count)
+        let amount = parseInt(count)
+
+        //kontrola krajních hodnot
+        if (amount < 0) {
+            amount = 1
+        } else if (amount > 10) {
+            amount = 10
+        }
 
         setParagraphs(data.slice(0, amount))
     }
 
     return (
-        <section>
+        <section className="form-section">
             <h1> Lorem Ipsum Generator (max. 10 odstavců)</h1>
             <form onSubmit={submitForm}>
                 <label htmlFor="paragraphs">Odstavce:</label>
