@@ -1,7 +1,7 @@
 import "./Modal.css"
 
-const Modal = () => {
-    return <div>Film byl přidán</div>
+const Modal = ({ notifContent }) => {
+    return <div>{notifContent}</div>
 }
 
 export default Modal
