@@ -7,7 +7,13 @@ const Modal = ({ notifContent, closeNotif }) => {
             closeNotif()
         }, 2000)
     })
-    return <div>{notifContent}</div>
+    return (
+        <div className="modal-box">
+            <div className="modal-text">
+                <p>{notifContent}</p>
+            </div>
+        </div>
+    )
 }
 
 export default Modal

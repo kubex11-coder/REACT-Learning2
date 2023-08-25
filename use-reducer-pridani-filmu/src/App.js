@@ -69,7 +69,7 @@ const App = () => {
     }
 
     return (
-        <section>
+        <section className="form">
             {state.showNotification && (
                 <Modal
                     notifContent={state.notificationContent}
@@ -89,7 +89,7 @@ const App = () => {
             <div>
                 {state.movies.map((oneMovie) => {
                     return (
-                        <div key={oneMovie.id}>
+                        <div className="all-movies" key={oneMovie.id}>
                             <p>{oneMovie.name}</p>
                             <button
                                 type="button"
