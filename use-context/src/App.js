@@ -1,8 +1,9 @@
-//stejná appka jako "use-context" jen řešeno bez hooku - ukázka props drillingu
+// stejná appka jako "prop-drilling" jen řešeno za použití hooku useContext
 
 import data from "./data"
 import MovieBox from "./components/MovieBox"
 import { useState } from "react"
+import MoviesContext from "./components/MoviesContext"
 
 const App = () => {
     const [movies, setMovies] = useState(data)
@@ -15,7 +16,11 @@ const App = () => {
         setMovies(filteredMovies)
     }
 
-    return <MovieBox data={movies} deleteMovie={deleteMovie} />
+    return (
+        <MoviesContext.Provider value={{ deleteMovie, movies }}>
+            <MovieBox />
+        </MoviesContext.Provider>
+    )
 }
 
 export default App
