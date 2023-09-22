@@ -5,13 +5,17 @@ const Navbar = () => {
     return (
         <header>
             <nav>
-                <NavLink to="/">Home</NavLink>
-                <br />
+                <NavLink className="link" to="/">
+                    Home
+                </NavLink>
 
-                <NavLink to="/Movies">Movies</NavLink>
-                <br />
+                <NavLink className="link" to="/Movies">
+                    Movies
+                </NavLink>
 
-                <NavLink to="/Serials">Serials</NavLink>
+                <NavLink className="link" to="/Serials">
+                    Serials
+                </NavLink>
             </nav>
         </header>
     )

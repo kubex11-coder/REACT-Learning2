@@ -1,0 +1,30 @@
+.all-movies {
+    margin-top: 50px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 15px;
+}
+
+.one-movie {
+    width: 400px;
+    border: 2px solid #e50419;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 10px;
+    border-radius: 15px;
+}
+
+.one-movie img {
+    width: 100%;
+}
+
+.one-movie a {
+    text-decoration: none;
+    color: #e5e5e5;
+    background-color: #e50419;
+    padding: 5px 10px;
+    font-size: 18px;
+}

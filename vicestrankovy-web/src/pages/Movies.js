@@ -1,14 +1,14 @@
 import movies from "../data"
 import { Link } from "react-router-dom"
+import "./Movies.css"
 
 const Movies = () => {
     return (
         <div>
-            <h1>Movies</h1>
-            <div>
+            <div className="all-movies">
                 {movies.map((OneMovie) => {
                     return (
-                        <article key={OneMovie.id}>
+                        <article className="one-movie" key={OneMovie.id}>
                             <h2>{OneMovie.title}</h2>
                             <img src={OneMovie.image} alt="" />
                             <br />

@@ -1,6 +1,7 @@
 import { useParams } from "react-router-dom"
 import { Link } from "react-router-dom"
 import movies from "../data"
+import "./OneMovie.css"
 
 const OneMovie = () => {
     const { movieId } = useParams()
@@ -12,7 +13,7 @@ const OneMovie = () => {
     const { title, image, description, tags } = oneSpecificMovie
 
     return (
-        <article>
+        <article className="one-movie-detail">
             <h2>{title}</h2>
             <img src={image} alt="" />
             <p>{description}</p>
