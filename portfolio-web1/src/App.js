@@ -1,10 +1,13 @@
 import React from "react";
-import "./App.css";
+import "./index.css";
+import Navbar from "./components/Navbar";
 
 const App = () => {
   return (
     <div>
-      <section>Hero</section>
+      <section>
+        <Navbar></Navbar>
+      </section>
       <section>Paralax</section>
       <section>Services</section>
       <section>Parallax</section>
